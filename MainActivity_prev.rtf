@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;\red9\green9\blue9;\red0\green29\blue164;\red18\green48\blue202;
+\red114\green0\blue130;\red17\green109\blue18;}
+{\*\expandedcolortbl;;\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c0\c11373\c64314;\csgenericrgb\c7059\c18824\c79216;
+\csgenericrgb\c44706\c0\c50980;\csgenericrgb\c6667\c42745\c7059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23600\viewh17760\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 <\cf3 androidx.drawerlayout.widget.DrawerLayout \cf4 xmlns:\cf5 android\cf6 ="http://schemas.android.com/apk/res/android"\
+    \cf4 xmlns:\cf5 app\cf6 ="http://schemas.android.com/apk/res-auto"\
+    \cf4 xmlns:\cf5 tools\cf6 ="http://schemas.android.com/tools"\
+    \cf5 android\cf4 :layout_width\cf6 ="match_parent"\
+    \cf5 android\cf4 :layout_height\cf6 ="match_parent"\
+    \cf5 android\cf4 :backgroundTint\cf6 ="@color/cyan_400"\
+    \cf5 tools\cf4 :context\cf6 =".MainActivity"\cf2 >\
+\
+    <\cf3 androidx.constraintlayout.widget.ConstraintLayout\
+        \cf5 android\cf4 :layout_width\cf6 ="match_parent"\
+        \cf5 android\cf4 :layout_height\cf6 ="match_parent"\cf2 >\
+\
+        <\cf3 ImageView\
+            \cf5 android\cf4 :id\cf6 ="@+id/imageView"\
+            \cf5 android\cf4 :layout_width\cf6 ="362dp"\
+            \cf5 android\cf4 :layout_height\cf6 ="194dp"\
+            \cf5 android\cf4 :layout_marginStart\cf6 ="28dp"\
+            \cf5 android\cf4 :layout_marginTop\cf6 ="16dp"\
+            \cf5 android\cf4 :scaleType\cf6 ="fitXY"\
+            \cf5 android\cf4 :src\cf6 ="@mipmap/welcome_page"\
+            \cf5 app\cf4 :layout_constraintEnd_toEndOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintStart_toStartOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintTop_toTopOf\cf6 ="parent" \cf2 />\
+\
+        <\cf3 Button\
+            \cf5 android\cf4 :onClick\cf6 ="login"\
+            \cf5 android\cf4 :id\cf6 ="@+id/login_button"\
+            \cf5 android\cf4 :layout_width\cf6 ="170dp"\
+            \cf5 android\cf4 :layout_height\cf6 ="48dp"\
+            \cf5 android\cf4 :layout_marginStart\cf6 ="24dp"\
+            \cf5 android\cf4 :layout_marginTop\cf6 ="134dp"\
+            \cf5 android\cf4 :layout_marginEnd\cf6 ="24dp"\
+            \cf5 android\cf4 :backgroundTint\cf6 ="@color/cyan_400"\
+            \cf5 android\cf4 :text\cf6 ="Log In \\n
+\f1 \uc0\u55357 \u57042 
+\f0 "\
+            \cf5 android\cf4 :textColor\cf6 ="@color/logo_blue"\
+            \cf5 app\cf4 :layout_constraintEnd_toEndOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintStart_toStartOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintTop_toBottomOf\cf6 ="@+id/imageView" \cf2 />\
+\
+        <\cf3 Button\
+            \cf5 android\cf4 :onClick\cf6 ="register"\
+            \cf5 android\cf4 :id\cf6 ="@+id/register_button"\
+            \cf5 android\cf4 :layout_width\cf6 ="170dp"\
+            \cf5 android\cf4 :layout_height\cf6 ="48dp"\
+            \cf5 android\cf4 :layout_marginStart\cf6 ="24dp"\
+            \cf5 android\cf4 :layout_marginTop\cf6 ="35dp"\
+            \cf5 android\cf4 :layout_marginEnd\cf6 ="24dp"\
+            \cf5 android\cf4 :backgroundTint\cf6 ="@color/green_200"\
+            \cf5 android\cf4 :text\cf6 ="New Account 
+\f2 \uc0\u55357 \u56770 \u65039 
+\f0 "\
+            \cf5 android\cf4 :textColor\cf6 ="@color/logo_blue"\
+            \cf5 app\cf4 :layout_constraintEnd_toEndOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintStart_toStartOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintTop_toBottomOf\cf6 ="@+id/login_button" \cf2 />\
+\
+        <\cf3 ProgressBar\
+            \cf5 android\cf4 :id\cf6 ="@+id/progressBar"\
+            \cf4 style\cf6 ="?android:attr/progressBarStyle"\
+            \cf5 android\cf4 :layout_width\cf6 ="wrap_content"\
+            \cf5 android\cf4 :layout_height\cf6 ="wrap_content"\
+            \cf5 android\cf4 :layout_marginStart\cf6 ="181dp"\
+            \cf5 android\cf4 :layout_marginTop\cf6 ="60dp"\
+            \cf5 android\cf4 :layout_marginEnd\cf6 ="182dp"\
+            \cf5 app\cf4 :layout_constraintEnd_toEndOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintStart_toStartOf\cf6 ="parent"\
+            \cf5 app\cf4 :layout_constraintTop_toBottomOf\cf6 ="@+id/register_button" \cf2 />\
+\
+    </\cf3 androidx.constraintlayout.widget.ConstraintLayout\cf2 >\
+\
+</\cf3 androidx.drawerlayout.widget.DrawerLayout\cf2 >\
+\
+}

@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red0\green29\blue164;\red9\green9\blue9;\red140\green119\blue13;
+\red114\green0\blue130;\red10\green79\blue103;\red121\green121\blue121;\red17\green109\blue18;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c11373\c64314;\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c54902\c46667\c5098;
+\csgenericrgb\c44706\c0\c50980;\csgenericrgb\c3922\c30980\c40392;\csgenericrgb\c47451\c47451\c47451;\csgenericrgb\c6667\c42745\c7059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 package \cf0 com.example.pharmacy_app\cf3 ;\
+\
+\cf2 import \cf0 android.annotation.\cf4 SuppressLint\cf3 ;\
+\cf2 import \cf0 android.content.Intent\cf3 ;\
+\cf2 import \cf0 android.os.Bundle\cf3 ;\
+\cf2 import \cf0 android.view.View\cf3 ;\
+\cf2 import \cf0 android.view.Menu\cf3 ;\
+\cf2 import \cf0 android.widget.Button\cf3 ;\
+\cf2 import \cf0 android.widget.ProgressBar\cf3 ;\
+\cf2 import \cf0 android.widget.Toast\cf3 ;\
+\
+\cf2 import \cf0 com.google.android.material.snackbar.Snackbar\cf3 ;\
+\cf2 import \cf0 com.google.android.material.navigation.NavigationView\cf3 ;\
+\
+\cf2 import \cf0 androidx.navigation.NavController\cf3 ;\
+\cf2 import \cf0 androidx.navigation.Navigation\cf3 ;\
+\cf2 import \cf0 androidx.navigation.ui.AppBarConfiguration\cf3 ;\
+\cf2 import \cf0 androidx.navigation.ui.NavigationUI\cf3 ;\
+\cf2 import \cf0 androidx.drawerlayout.widget.DrawerLayout\cf3 ;\
+\cf2 import \cf0 androidx.appcompat.app.AppCompatActivity\cf3 ;\
+\
+\cf2 import \cf0 com.example.pharmacy_app.databinding.ActivityMainBinding\cf3 ;\
+\cf2 import \cf0 com.google.firebase.auth.FirebaseAuth\cf3 ;\
+\
+\cf2 public class \cf0 MainActivity \cf2 extends \cf0 AppCompatActivity\
+\cf3 \{\
+\
+    \cf0 Button \cf5 loginBtn\cf3 , \cf5 registerBtn\cf3 ;\
+    \cf0 FirebaseAuth \cf5 auth\cf3 ;\
+    \cf0 ProgressBar \cf5 progressBar\cf3 ;\
+\
+\
+    \cf4 @Override\
+    \cf2 protected void \cf6 onCreate\cf3 (\cf0 Bundle \cf3 savedInstanceState)\
+    \{\
+        \cf2 super\cf3 .onCreate(savedInstanceState);\
+        setContentView(\cf0 R\cf3 .\cf0 layout\cf3 .
+\f1\i \cf5 activity_main
+\f0\i0 \cf3 );\
+\
+        \cf5 loginBtn \cf3 = findViewById(\cf0 R\cf3 .\cf0 id\cf3 .login_button);\
+        \cf5 registerBtn \cf3 = findViewById(\cf0 R\cf3 .\cf0 id\cf3 .register_button);\
+        \cf5 progressBar \cf3 = findViewById(\cf0 R\cf3 .\cf0 id\cf3 .progressBar);\
+        \cf5 auth \cf3 = \cf0 FirebaseAuth\cf3 .
+\f1\i getInstance
+\f0\i0 ();\
+\
+        \cf5 progressBar\cf3 .setVisibility(\cf0 View\cf3 .
+\f1\i \cf5 GONE
+\f0\i0 \cf3 );   
+\f1\i \cf7 // initially progress bar hidden\
+\
+        
+\f0\i0 \cf2 if\cf3 (\cf5 auth\cf3 .getCurrentUser() != \cf2 null\cf3 )   
+\f1\i \cf7 // if already logged in user\
+        
+\f0\i0 \cf3 \{\
+            \cf5 progressBar\cf3 .setVisibility(\cf0 View\cf3 .
+\f1\i \cf5 VISIBLE
+\f0\i0 \cf3 );\
+            \cf0 Toast\cf3 .
+\f1\i makeText
+\f0\i0 (\cf2 this\cf3 , \cf8 "please wait already logged in"\cf3 , \cf0 Toast\cf3 .
+\f1\i \cf5 LENGTH_SHORT
+\f0\i0 \cf3 ).show();\
+        \}\
+\
+\
+    \}\
+\
+    \cf2 public void \cf6 login\cf3 (\cf0 View \cf3 v)\
+    \{\
+        startActivity(\cf2 new \cf3 Intent(\cf0 MainActivity\cf3 .\cf2 this\cf3 ,\cf0 LoginActivity\cf3 .\cf2 class\cf3 ));\
+    \}\
+\
+    \cf2 public void \cf6 register\cf3 (\cf0 View \cf3 v)\
+    \{\
+        startActivity(\cf2 new \cf3 Intent(\cf0 MainActivity\cf3 .\cf2 this\cf3 ,\cf0 RegistrationActivity\cf3 .\cf2 class\cf3 ));\
+    \}\
+\}\
+}
